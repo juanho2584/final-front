@@ -1,0 +1,331 @@
+/* Estilos personalizados */
+
+body {
+  font-family: "Overlock SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #9494942f;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.sectionPrincipal {
+  color: white;
+  background: linear-gradient(to right top, #0000008a, #ea27278a),
+    url(../assets/imgs/productos/Zapatillas.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .tituloPrincipal {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .subtituloPrincipal {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .botonRegistrarse {
+    background-color: #2761f3;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    /* Agregar efecto de botón presionado */
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover {
+      background-color: #0639e0;
+      color: black;
+      transform: scale(0.95);
+    }
+  }
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.boton {
+  border: 1px solid white;
+  box-sizing: content-box;
+  margin-top: 50px;
+  margin-left: 20px;
+  background-color: #1087f5;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 60px;
+  /* Agregar efecto de botón presionado */
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    background-color: #290af5;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.container-text {
+  background-color: transparent;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    .container-text-h2 {
+      color: black;
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+}
+
+/* Barra lateral del carrito */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+/* Header del carrito */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+}
+
+.cart-header button {
+  border: none;
+  font-size: 1.2rem;
+}
+
+/* Grid para los elementos del carrito */
+.cart-item {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-item div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cart-item div:nth-child(3) button {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  padding: 0;
+  text-align: center;
+}
+
+/* Estilo personalizado para el número del carrito */
+#cart-count {
+  background-color: #ff5733; /* Color personalizado (ej. un tono naranja) */
+  color: white; /* Color del texto (el número) */
+  font-weight: bold; /* Hacer el número más destacado */
+}
+
+/* Contenedor de la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 15px; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones */
+.pagination .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambios visuales en hover */
+.pagination .btn:hover {
+  background-color: #007bff; /* Color azul para hover */
+  color: white;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .pagination .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Cards */
+.card {
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: #8dc8f559;
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(21, 20, 20, 0.3);
+  }
+}
+.product-image {
+  margin: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.garantia {
+  color: rgb(24, 190, 24);
+  width: 120px;
+  font-size: 14px;
+  background-color: #9b8cfa5a;
+  border-radius: 50px;
+}
+
+/* Estilo general del formulario */
+.card {
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* Cabecera del formulario */
+.mb-0 {
+  color: black;
+}
+.card-header {
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Degradado */
+  font-size: 1.8rem; /* Tamaño de texto */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Inputs y textarea */
+.form-control {
+  border: 1px solid #ddd; /* Borde claro */
+  padding: 10px 15px; /* Espaciado */
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Borde azul */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Sombra azul suave */
+}
+
+/* Botón de envío */
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Degradado azul */
+  border: none; /* Sin bordes */
+  font-size: 1.1rem; /* Texto ligeramente más grande */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #004085); /* Degradado oscuro */
+  box-shadow: 0 4px 10px rgba(0, 91, 187, 0.4); /* Sombra más destacada */
+}
+
+/* Íconos */
+label i {
+  transition: transform 0.3s ease-in-out;
+}
+
+label i:hover {
+  transform: scale(1.1); /* Ampliar ligeramente al pasar el ratón */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .card-header {
+    font-size: 1.5rem; /* Reducir tamaño de texto en móviles */
+  }
+
+  .btn-primary {
+    font-size: 1rem; /* Botón más compacto */
+  }
+}
+
+footer {
+  background-color: #ffffff;
+  .text-dark {
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    .footer-img {
+      &:hover {
+        transform: scale(2);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  
+  .list-unstyled {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .texto {
+    text-align: center;
+  }
+  
+}
